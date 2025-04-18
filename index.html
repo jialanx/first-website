@@ -2,10 +2,24 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css" />
+        <title>My First Website</title>
     </head>
     <body>
-        <h1>My Website</h1>
-        <p>Coder Dino</p>
-        <img src="https://github.com/hackclub/dinosaurs/raw/main/smart_dinosaur_docs.png"/>
+        <div class="box">
+            <h1>My Website</h1>
+            <img src="images/catCoffee.jpg" alt="Cat with Coffee"/>
+            <h2>✩♬ ₊˚.🎧⋆☾⋆⁺₊✧</h2>
+            <button onclick="showTime()">Show Time</button>
+            <p id="time"></p>
+        </div>
+
+        <script>
+            function showTime() {
+                const data = new Date();
+                const time = data.toLocaleTimeString();
+                const date = data.toDateString();
+                document.getElementById("time").textContent = `${date} | ${time}`;
+            }
+        </script>
     </body>
 </html>
